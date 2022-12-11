@@ -1,0 +1,17 @@
+def maximumWealth(self, accounts):
+        """
+        :type accounts: List[List[int]]
+        :rtype: int
+        """
+
+        
+
+        max = sum(accounts[0])
+
+        for each in accounts:
+            
+            num = int(sum(each))
+            if(num>max):
+                max = num
+        
+        return max
