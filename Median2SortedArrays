@@ -1,0 +1,36 @@
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        
+        int[] deeznuts = new int[nums1.length + nums2.length];
+        double median = 0;
+        int count = 0;
+        for (int each : nums1) 
+        {
+            deeznuts[count++] = each;
+        }
+
+        for (int each : nums2) 
+        {
+            deeznuts[count++] = each;
+        }
+
+        Arrays.sort(deeznuts);
+
+        int scrotum = deeznuts.length;
+        if (scrotum % 2 == 0)
+        {
+            
+            int x1 = scrotum / 2;
+            int x2 = (scrotum / 2) - 1;
+            median = (double)(deeznuts[x1] + deeznuts[x2]) / 2;
+        }
+        else{
+            int len = scrotum / 2;
+            median = deeznuts[len];
+
+        }
+        return median;
+        
+
+    }
+}
