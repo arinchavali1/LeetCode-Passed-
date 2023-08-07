@@ -1,0 +1,32 @@
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        int[] index = new int[2];
+        int count = 0;
+        for (int i = 0; i < nums.length; i++)
+        {
+            if (nums[i] == target)
+            {
+                index[0] = i;
+                count++;
+                break;
+            }
+        }
+        int lastIndex = 0;
+        for (int j = 0; j < nums.length; j++)
+        {
+            if (nums[j] == target)
+            {
+                lastIndex = j;
+                count++;
+            }
+        }
+
+        index[1] = lastIndex;
+        if (count != 0)
+        {
+            return index;
+        }
+        int[] n = {-1, -1};
+        return n;
+    }
+}
