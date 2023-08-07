@@ -1,0 +1,25 @@
+class Solution(object):
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        if (len(s) != len(t)):
+            return False
+        
+        freqs = {}
+        freqt = {}
+        count = 0
+        for each in s:
+            if (each in freqs):
+                freqs[each]+=1
+            else:
+                freqs[each] = 1
+        for i in t:
+            if (i in freqt):
+                freqt[i]+=1
+            else:
+                freqt[i] = 1
+        
+        return freqs == freqt
