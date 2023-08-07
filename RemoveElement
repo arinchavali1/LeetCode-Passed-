@@ -1,0 +1,22 @@
+class Solution {
+    public int removeElement(int[] nums, int val) {
+
+        List<Integer>noRep = new ArrayList<Integer>();
+
+        for (int i = 0; i < nums.length; i++)
+        {
+            if (nums[i] != val)
+            {
+                noRep.add(nums[i]);
+            }
+        }
+
+        for (int j = 0; j < noRep.size(); j++)
+        {
+            nums[j] = noRep.get(j);
+        }
+
+        return noRep.size();
+        
+    }
+}
