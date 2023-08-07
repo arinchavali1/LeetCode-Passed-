@@ -1,0 +1,17 @@
+class Solution {
+    public int lengthOfLastWord(String s) {
+        int c1 = 0;
+        int c2 = 0;
+
+        List<String> a = new ArrayList<String>();
+
+        Scanner scan = new Scanner(s);
+        while (scan.hasNext())
+        {
+            String st = scan.next();
+            a.add(st);
+        }
+
+        return (a.get(a.size() - 1)).length();
+    }
+}
